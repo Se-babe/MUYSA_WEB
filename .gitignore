@@ -1,0 +1,9 @@
+# Large local media — not part of the web app build
+media/
+
+# Accidental bulk uploads in public
+frontend/public/images/events/**/*.jpg
+frontend/public/images/events/**/*.jpeg
+frontend/public/images/events/**/*.png
+frontend/public/**/*.zip
+frontend/public/**/*.crdownload

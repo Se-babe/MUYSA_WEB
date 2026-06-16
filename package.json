@@ -1,0 +1,20 @@
+{
+  "name": "muysa-connect",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "check": "node scripts/system-check.js",
+    "preview": "npm run preview --prefix frontend",
+    "firebase:use": "firebase use muysa-6962c",
+    "deploy:rules": "firebase deploy --project muysa-6962c --only firestore:rules,firestore:indexes",
+    "deploy:storage": "firebase deploy --project muysa-6962c --only storage",
+    "deploy:hosting": "npm run build && firebase deploy --project muysa-6962c --only hosting",
+    "gallery:build": "python3 scripts/build-event-gallery.py",
+    "deploy:all": "npm run build && firebase deploy --project muysa-6962c --only firestore:rules,firestore:indexes,hosting"
+  },
+  "devDependencies": {
+    "firebase-tools": "^14.0.0"
+  }
+}
